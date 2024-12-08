@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, useLocation } from 'react-router-dom';
 import Home from './containers/home';
 import About from './containers/about';
 import Resume from './containers/resume';
@@ -33,10 +33,17 @@ function App() {
       console.log(container);
   };
 
+  const location = useLocation();
+  console.log('location',location);
+  
+  const renderParticleJsInHomePage = location?.pathname === "/";
+
   return (
     <div className="App">
-      {/* Particles js */}
-      <Particles id="particles" particlesLoaded={particlesLoadedFunction} options={particles} />
+      {/* Particles js background in homepage*/}
+      {renderParticleJsInHomePage && 
+        <Particles id="particles" particlesLoaded={particlesLoadedFunction} options={particles} />
+      }
       {/* navbar */}
       <NavBar/>
       {/* main page content */}
