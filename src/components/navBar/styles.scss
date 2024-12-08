@@ -1,0 +1,91 @@
+.navbar{
+    background-color: var(--yellow-theme-nav-background-color);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: inherit;
+        padding: 0rem 1rem;
+        flex:1;
+
+        &__logo{
+            color: var(--yellow-theme-main-color);
+        }
+
+        &__menu{
+            display: flex;
+            list-style: none;
+            text-align: center;
+
+            &__item{
+                line-height: 4rem;
+                margin-right: 1.5rem;
+                font-size: 1.6rem;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background: transparent;
+                    transition: all 0.5s ease;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                    background: var(--yellow-theme-main-color);
+                }
+
+                &__links{
+                    text-decoration: none;
+                    color: var(--yellow-theme-main-color);
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* will be configured later*/
+.nav-icon{
+    display: none;      
+}
+
+@media only screen and (max-width: 768px){
+    .navbar__container__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 5rem;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+
+        &.active{
+            background-color: #181818;
+            left: 0px;
+            opacity: 1;
+        }
+
+        &__item{
+            border-bottom: 1px sold #282828;
+            margin: 0px;
+            padding: 20px 0px;
+        }
+    }
+
+    .nav-icon{
+        display: block;
+        cursor: pointer;
+        color: var(--yellow-theme-main-color);
+        padding-right: 2rem;
+    }
+}

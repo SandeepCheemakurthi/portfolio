@@ -3,7 +3,7 @@ import React from "react";
 const Resume=()=>{
     return (
         <div>
-            About Page
+            Resume Page
         </div>
     )
 }
