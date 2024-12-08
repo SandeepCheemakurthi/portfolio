@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {Routes, Route, useLocation } from 'react-router-dom';
 import Home from './containers/home';
 import About from './containers/about';
@@ -47,13 +47,15 @@ function App() {
       {/* navbar */}
       <NavBar/>
       {/* main page content */}
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/resume" element={<Resume/>} />
-        <Route path="/portfolio" element={<Portfolio/>} />
-        <Route path="/contact" element={<Contact/>} />
-      </Routes>
+      <div className='App__main-page-content'>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/resume" element={<Resume/>} />
+          <Route path="/portfolio" element={<Portfolio/>} />
+          <Route path="/contact" element={<Contact/>} />
+        </Routes>
+      </div>
     </div>
   );
 }
