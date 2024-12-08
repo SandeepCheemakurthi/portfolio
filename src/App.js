@@ -6,11 +6,37 @@ import Resume from './containers/resume';
 import Portfolio from './containers/portfolio';
 import Contact from './containers/contact';
 import NavBar from './components/navBar';
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadFull } from "tsparticles";  // Required for Particles
+import particles from "./utils/particles";
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [ init, setInit ] = useState(false);
+
+  // this should be run only once per application lifetime
+  useEffect(() => {
+      initParticlesEngine(async (engine) => {
+          // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+          // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+          // starting from v2 you can add only the features you need reducing the bundle size
+          //await loadAll(engine);
+          await loadFull(engine);
+          // await loadSlim(engine);
+          //await loadBasic(engine);
+      }).then(() => {
+          setInit(true);
+      });
+  }, []);
+
+  const particlesLoadedFunction = (container) => {
+      console.log(container);
+  };
+
   return (
     <div className="App">
       {/* Particles js */}
+      <Particles id="particles" particlesLoaded={particlesLoadedFunction} options={particles} />
       {/* navbar */}
       <NavBar/>
       {/* main page content */}
