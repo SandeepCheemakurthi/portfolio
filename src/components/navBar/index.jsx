@@ -14,8 +14,8 @@ const data = [
         to:'/resume'
     },
     {
-        label: 'Portfolio',
-        to:'/portfolio'
+        label: 'Skills',
+        to:'/skills'
     },
     {
         label: 'About',
