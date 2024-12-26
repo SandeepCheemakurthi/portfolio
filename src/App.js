@@ -5,6 +5,7 @@ import About from './containers/about';
 import Resume from './containers/resume';
 import Skills from './containers/skills';
 import Contact from './containers/contact';
+import Otherprojects from './containers/other-projects';
 import NavBar from './components/navBar';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";  // Required for Particles
@@ -54,6 +55,7 @@ function App() {
           <Route path="/resume" element={<Resume/>} />
           <Route path="/skills" element={<Skills/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/otherprojects" element={<Otherprojects/>} />
         </Routes>
       </div>
     </div>

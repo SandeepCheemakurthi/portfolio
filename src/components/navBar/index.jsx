@@ -24,6 +24,10 @@ const data = [
     {
         label: 'Contact',
         to:'/contact'
+    },
+    {
+        label: 'Other Projects',
+        to:'/otherprojects'
     }
 ]
 
