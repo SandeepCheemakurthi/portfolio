@@ -8,7 +8,7 @@ const Home=()=>{
     const navigate = useNavigate();
 
     const handleNavigateToContactPage = () =>{
-        navigate('/contact')
+        navigate('/portfolio/contact')
     }
 
     return (

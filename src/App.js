@@ -37,7 +37,7 @@ function App() {
   const location = useLocation();
   console.log('location',location);
   
-  const renderParticleJsInHomePage = location?.pathname === "/home" || location?.pathname === "/";
+  const renderParticleJsInHomePage = location?.pathname === "/portfolio/home" || location?.pathname === "/";
 
   return (
     <div className="App">
@@ -50,12 +50,12 @@ function App() {
       {/* main page content */}
       <div className='App__main-page-content'>
         <Routes>
-          <Route path="*" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/resume" element={<Resume/>} />
-          <Route path="/skills" element={<Skills/>} />
-          <Route path="/contact" element={<Contact/>} />
+          <Route path="*" element={<Navigate to="/portfolio/home" replace />} />
+          <Route path="/portfolio/home" element={<Home/>} />
+          <Route path="/portfolio/above" element={<About/>} />
+          <Route path="/portfolio/resume" element={<Resume/>} />
+          <Route path="/portfolio/skills" element={<Skills/>} />
+          <Route path="/portfolio/contact" element={<Contact/>} />
           {/* <Route path="/otherprojects" element={<Otherprojects/>} /> */}
         </Routes>
       </div>

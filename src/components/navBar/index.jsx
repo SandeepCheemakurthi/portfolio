@@ -11,19 +11,19 @@ const data = [
     },
     {
         label: 'Resume',
-        to:'/resume'
+        to:'/portfolio/resume'
     },
     {
         label: 'Skills',
-        to:'/skills'
+        to:'/portfolio/skills'
     },
     {
         label: 'About',
-        to:'/about'
+        to:'/portfolio/above'
     },
     {
         label: 'Contact',
-        to:'/contact'
+        to:'/portfolio/contact'
     }
 ]
 
