@@ -1,5 +1,5 @@
 import './App.scss';
-import {Routes, Route, useLocation } from 'react-router-dom';
+import {Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Home from './containers/home';
 import About from './containers/about';
 import Resume from './containers/resume';
@@ -37,7 +37,7 @@ function App() {
   const location = useLocation();
   console.log('location',location);
   
-  const renderParticleJsInHomePage = location?.pathname === "/";
+  const renderParticleJsInHomePage = location?.pathname === "/home" || location?.pathname === "/";
 
   return (
     <div className="App">
@@ -50,7 +50,8 @@ function App() {
       {/* main page content */}
       <div className='App__main-page-content'>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/resume" element={<Resume/>} />
           <Route path="/skills" element={<Skills/>} />
