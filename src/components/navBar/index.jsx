@@ -20,10 +20,6 @@ const data = [
     {
         label: 'About',
         to:'/portfolio/above'
-    },
-    {
-        label: 'Contact',
-        to:'/portfolio/contact'
     }
 ]
 
