@@ -51,6 +51,7 @@ function App() {
       <div className='App__main-page-content'>
         <Routes>
           <Route path="*" element={<Navigate to="/portfolio/home" replace />} />
+          <Route path="/portfolio" element={<Navigate to="/portfolio/home" replace />} />
           <Route path="/portfolio/home" element={<Home/>} />
           <Route path="/portfolio/above" element={<About/>} />
           <Route path="/portfolio/resume" element={<Resume/>} />
