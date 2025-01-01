@@ -50,7 +50,6 @@
     }
 }
 
-
 @media only screen and (max-width: 768px){
     .skills{
         &__content-wrapper{
@@ -59,5 +58,13 @@
     }
     .skills__content-wrapper__inner-content__progressbar-container{
         margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1600px) {
+    .skills__content-wrapper__inner-content__progressbar-container__skills{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Adjust the gap as needed */
     }
 }
