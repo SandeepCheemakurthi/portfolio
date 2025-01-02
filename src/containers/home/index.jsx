@@ -17,7 +17,7 @@ const Home = () => {
                 <h1>
                     Hello, I'm Sandeep
                 </h1><br></br>
-                <h3>Front-End Developer | Angular Expert | User Experience Enthusiast</h3>
+                <h3>Front-End Developer| React & Angular Expert | User Experience Enthusiast</h3>
             </div>
             <Animate
                 play
