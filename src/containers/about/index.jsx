@@ -12,7 +12,7 @@ const personalInformation = [
     { label: "LinkedIn", value: "https://linkedin.com/in/sandeep-cheemakurthi" },
 ]
 
-const jobSummary = 'A seasoned Angular developer with three years of hands-on experience, I have a proven track record in crafting responsive web applications. My versatility extends to backend development, which enhances my ability to deliver comprehensive solutions. I am now eager to embrace new challenges and leverage my skills on innovative projects, contributing to meaningful advancements in technology.'
+const jobSummary = 'Results-driven software developer with 4+ years of hands-on experience in designing, developing, and deploying scalable web applications. Proficient in Angular, React, JavaScript, and backend integration using Node.js and SpringBoot. Skilled at building responsive UI components, integrating RESTful APIs, optimizing performance, and implementing Micro Frontends (MFE) using Web Components. Adept at working in agile environments, resolving production issues, and delivering high-quality code that aligns with business objectives.'
 
 const About = () => {
     return (

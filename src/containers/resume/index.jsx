@@ -7,12 +7,12 @@ import { data } from "./utils";
 import 'react-vertical-timeline-component/style.min.css';
 import { MdWork } from "react-icons/md";
 
-const Resume=()=>{
+const Resume = () => {
     return (
         <section id="resume" className="Resume">
             <PageHeader
-                headerText = "Resume"
-                icon={<BsInfoCircleFill size={40}/>}
+                headerText="Resume"
+                icon={<BsInfoCircleFill size={40} />}
             />
             <div className="timeline">
                 <div className="timeline__experience">
@@ -24,7 +24,7 @@ const Resume=()=>{
                         lineColor="var(--yellow-theme-main-color)"
                     >
                         {
-                            data.experience.map((item,i)=>(
+                            data.experience.map((item, i) => (
                                 <VerticalTimelineElement
                                     key={i}
                                     className="timeline__experience__vertical-timeline-element"
@@ -33,10 +33,10 @@ const Resume=()=>{
                                         color: 'var(--yellow-theme-sub-text-color)',
                                         border: '1.5px solid var(--yellow-theme-main-color)'
                                     }}
-                                    icon={<MdWork/>}
+                                    icon={<MdWork />}
                                     iconStyle={{
-                                            background: '#181818',
-                                            color: 'var(--yellow-theme-main-color)',
+                                        background: '#181818',
+                                        color: 'var(--yellow-theme-main-color)',
                                     }}
                                 >
                                     <div className="vertical-timeline-element-title-wrapper">
@@ -47,7 +47,15 @@ const Resume=()=>{
                                             {item.subTitle}
                                         </h4>
                                     </div>
-                                    <p className="vertical-timeline-element-title-wrapper-description">{item.description}</p>
+                                    {/* <p className="vertical-timeline-element-title-wrapper-description">{item.description}</p> */}
+                                    <p className="vertical-timeline-element-title-wrapper-description">
+                                        {item.description.split('\n').map((line, idx) => (
+                                            <React.Fragment key={idx}>
+                                                {line}
+                                                <br />
+                                            </React.Fragment>
+                                        ))}
+                                    </p>
                                 </VerticalTimelineElement>
                             ))
                         }
@@ -62,7 +70,7 @@ const Resume=()=>{
                         lineColor="var(--yellow-theme-main-color)"
                     >
                         {
-                            data.education.map((item,i)=>(
+                            data.education.map((item, i) => (
                                 <VerticalTimelineElement
                                     key={i}
                                     className="timeline__education__vertical-timeline-element"
@@ -71,10 +79,10 @@ const Resume=()=>{
                                         color: 'var(--yellow-theme-sub-text-color)',
                                         border: '1.5px solid var(--yellow-theme-main-color)'
                                     }}
-                                    icon={<MdWork/>}
+                                    icon={<MdWork />}
                                     iconStyle={{
-                                            background: '#181818',
-                                            color: 'var(--yellow-theme-main-color)',
+                                        background: '#181818',
+                                        color: 'var(--yellow-theme-main-color)',
                                     }}
                                 >
                                     <div className="vertical-timeline-element-title-wrapper">

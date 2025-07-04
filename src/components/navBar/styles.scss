@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     background-color: var(--yellow-theme-nav-background-color);
     height: 5rem;
     display: flex;
@@ -6,29 +6,29 @@
     align-items: center;
     font-size: 1.2rem;
 
-    &__container{
+    &__container {
         display: flex;
         align-items: center;
         width: 100%;
         height: inherit;
         padding: 0rem 1rem;
-        flex:1;
+        flex: 1;
 
-        &__logo{
+        &__logo {
             color: var(--yellow-theme-main-color);
         }
 
-        &__menu{
+        &__menu {
             display: flex;
             list-style: none;
             text-align: center;
 
-            &__item{
+            &__item {
                 line-height: 4rem;
                 margin-right: 1.5rem;
                 font-size: 1.6rem;
 
-                &::after{
+                &::after {
                     content: '';
                     display: block;
                     height: 3px;
@@ -37,28 +37,33 @@
                     transition: all 0.5s ease;
                 }
 
-                &:hover::after{
+                &:hover::after {
                     width: 100%;
                     background: var(--yellow-theme-main-color);
                 }
 
-                &__links{
+                &__links {
                     text-decoration: none;
                     color: var(--yellow-theme-main-color);
                     padding: 0.5rem;
                 }
+
             }
         }
     }
 }
 
 /* will be configured later*/
-.nav-icon{
-    display: none;      
+.nav-icon {
+    display: none;
 }
 
-@media only screen and (max-width: 768px){
-    .navbar__container__menu{
+.download {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar__container__menu {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -69,21 +74,25 @@
         opacity: 1;
         transition: all 0.5s ease;
 
-        &.active{
+        &.active {
             background-color: #181818;
             left: 0px;
             opacity: 1;
             z-index: 1;
         }
 
-        &__item{
+        &__item {
             border-bottom: 1px sold #282828;
             margin: 0px;
             padding: 20px 0px;
+
+            &__download {
+                cursor: pointer;
+            }
         }
     }
 
-    .nav-icon{
+    .nav-icon {
         display: block;
         cursor: pointer;
         color: var(--yellow-theme-main-color);
