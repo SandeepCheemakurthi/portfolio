@@ -30,7 +30,7 @@ const data = [
 
 const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf"; // Place your resume file in the public folder as 'resume.pdf'
+    link.href = `${process.env.PUBLIC_URL}/resume.pdf`; // This will resolve to /portfolio/resume.pdf
     link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
